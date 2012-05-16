@@ -446,6 +446,7 @@ class Abinit:
             fh.write('%.14f %.14f %.14f\n' %  tuple(v))
 
         fh.write('chkprim 0 # Allow non-primitive cells\n')
+        fh.write('chksymbreak 0 # Do not check k-points\n')
 
         fh.write('#Definition of the atom types\n')
         fh.write('ntypat %d\n' % (len(self.species)))
